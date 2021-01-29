@@ -12,11 +12,13 @@ Unfortunately, due to some time constraints before the initial launch of the sit
 ## Project instructions
 All the tasks are outlined in the word document.  
 The following is required to be completed:
-Part I: Investigate the existing schema
-Part II: Create the DDL for your new schema
-Part III: Migrate the provided data
+* Part I: Investigate the existing schema
+* Part II: Create the DDL for your new schema
+* Part III: Migrate the provided data
 
 ## Files used
+* bad_db.sql
+* Udidit, A Social News Aggregator Student Starter Template.doc
 
 ## Credits
 Udacity
