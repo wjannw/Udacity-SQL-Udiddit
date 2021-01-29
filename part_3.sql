@@ -30,7 +30,8 @@ ON​ ​"bp"​.​"username"​ = ​"u"​.​"username"​;
 INSERT​ ​INTO​ ​"votes"​(​"post_id"​, ​"user_id"​, ​"vote"​)
 SELECT​ ​"bp"​.​"id"​, ​"u"​.​"user_id"​, ​1​ ​AS​ ​"up_vote"
 FROM​(
-SELECT​ ​"id"​, REGEXP_SPLIT_TO_TABLE(​"upvotes"​, ​','​) A​ S​ "​ upvotes" FROM​ ​"bad_posts"​) ​"bp"
+SELECT​ ​"id"​, REGEXP_SPLIT_TO_TABLE(​"upvotes"​, ​','​) A​ S​ "​ upvotes"
+FROM​ ​"bad_posts"​) ​"bp"
 JOIN​ ​"users"​ ​"u"
 ON​ ​"bp"​.​"upvotes"​ = ​"u"​.​"username"​;
 
@@ -38,7 +39,8 @@ ON​ ​"bp"​.​"upvotes"​ = ​"u"​.​"username"​;
 INSERT​ ​INTO​ ​"votes"​(​"post_id"​, ​"user_id"​, ​"vote"​)
 SELECT​ ​"bp"​.​"id"​, ​"u"​.​"user_id"​, ​-1​ ​AS​ ​"downvote"
 FROM​(
-SELECT​ ​"id"​, REGEXP_SPLIT_TO_TABLE(​"downvotes"​, ​','​) ​AS​ ​"downvotes" FROM​ ​"bad_posts"​) ​"bp"
+SELECT​ ​"id"​, REGEXP_SPLIT_TO_TABLE(​"downvotes"​, ​','​) ​AS​ ​"downvotes"
+FROM​ ​"bad_posts"​) ​"bp"
 JOIN​ ​"users"​ ​"u"
 ON​ ​"bp"​.​"downvotes"​ = ​"u"​.​"username"​;
 
